@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <meta name="author" content="Bryan Montgomery Hamilton">
+  <meta name="keywords" content="200021401, javascript">
+  <meta name="description" content="Atividade sobre javascript">
+
+  <script>
+    function faixaEtaria(a) {
+      switch (true) {
+        case ((3 <= a) && (a <= 10)):
+          return "Faixa 1"
+
+        case ((11 <= a) && (a <= 25)):
+          return "Faixa 2"
+
+        case ((26 <= a) && (a <= 55)):
+          return "Faixa 3"
+
+        case ((56 <= a) && (a <= 100)):
+          return "Faixa 4"
+
+        default:
+          return "Faixa Inválida"
+      }
+    }
+
+    function editTexto(a) {
+      result = faixaEtaria(a)
+
+      if (result != "Faixa Inválida") {
+        result = "A faixa etária é " + result
+      }
+
+      document.getElementById("paragraph_1").innerHTML = result
+    }
+  </script>
+</head>
+
+<body>
+
+  <label for="numero">Insira Idade:</label><br>
+  <input type="number" id="a"><br>
+  <button onclick="editTexto(document.getElementById('a').value)">
+    Enviar
+  </button>
+
+  <p id="paragraph_1"></p>
+</body>
+
+</html>
